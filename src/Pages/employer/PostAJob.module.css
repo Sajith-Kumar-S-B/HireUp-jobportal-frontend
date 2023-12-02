@@ -1,0 +1,236 @@
+.PostJob{
+   max-width:90%;
+   margin: 50px auto;
+
+  padding: 1rem 2rem;
+}
+
+.PostJob_form{
+    background-color: #fafafa;
+    padding: 2rem 0;
+}
+
+
+.form_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.form_title_div {
+    width: 50%;
+    padding: 0 2rem;
+}
+
+
+.form_title_div label{
+    display: block;
+    margin-bottom: .5rem;
+    font-size: large;
+}
+
+
+.form_title_div input{
+    border: 1px solid #eee;
+
+    outline: none;
+    width: 100%;
+    display: block;
+    padding:  .8rem 1rem;
+    color: gray;
+}
+
+
+.form_title_div select{
+    border: 1px solid #eee;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding:  .8rem 1rem;
+    color: gray;
+ 
+
+}
+
+.form_title_div select > option:hover { 
+    background: #151f63 !important;
+}
+
+
+.form_creatable_div{
+    padding: 0 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+
+.form_creatable_div label{
+    display: block;
+    margin-bottom: .5rem;
+    font-size: large;
+}
+
+
+.form_creatable_div .form_creatable{
+    width: 100%;
+    display: block;
+    padding:  1rem 0;
+    border: none;
+    outline: none;
+    color: gray;
+    
+}
+
+
+.form_creatable_div .form_textarea{
+width: 100%;
+resize: none;
+border: none;
+border: 1px solid #eee;
+outline: none;
+padding:  1rem 1rem;
+color: gray;
+
+
+}
+
+
+.form_creatable_div input{
+    border: 1px solid #eee;
+
+    outline: none;
+    width: 100%;
+    display: block;
+    padding:  .8rem 1rem;
+    color: gray;
+}
+
+
+.form_submit{
+    margin: 1rem 2rem;
+    padding:  .5rem 1rem;
+   outline: none;
+   display: block;
+   background-color:#151f63 ;
+   color: #ffffff;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+
+/* my jobs */
+
+
+.myJobs{
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+    margin-top: 100px;
+}
+
+.myJobs_div{
+    width: 50%;
+    margin: 2rem auto;
+
+}
+
+
+
+.myJobs_div h1{
+    text-align: center;
+    padding: 2rem;
+}
+
+.myJobs_search{
+    display: flex;
+
+}
+.myJobs_search input{
+    width: 100%;
+    padding: .8rem 1rem;
+    outline: none;
+   border: 1px solid #ddd;
+    border-right: none;
+}
+
+
+.myJobs_search button{
+    background-color: #151f63;
+    padding: 10px 20px;
+    color: #fafafa;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.myJobs_table{
+    background-color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.myJobs_table_div{
+    width: 70%;
+   margin: auto;
+   overflow-x: auto;
+   display: block;
+   
+}
+.myJobs_table_div table{
+    width: 100%;
+   text-align: center;
+   background-color: #fafafa;
+   border-collapse: collapse;
+   margin-bottom: 2rem;
+}
+
+.myJobs_table_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.table_header{
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.table_header th{
+    padding: 1.5rem ;
+    
+}
+
+.table_body td{
+    padding: 1rem;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width:756px){
+
+    .PostJob{
+        max-width: 95%;
+        padding: 0;
+    }
+    .form_title{
+        flex-direction: column;
+    }
+
+    .form_title_div{
+        width: 100%;
+    }
+}

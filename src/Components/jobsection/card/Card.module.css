@@ -1,0 +1,52 @@
+.card{
+    margin: 20px;
+    border: 2px solid #ededed;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+
+
+.category{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card_details h6{
+  color: black;
+}
+
+.card_details h4{
+  color: black;
+  margin-top: .5rem;
+  font-weight: 600;
+}
+
+
+.card_details p{
+  color: black;
+ 
+}
+
+
+.Link{
+  display: flex;
+ gap: 2rem;
+  align-items: flex-start;
+}
+
+
+.Link img{
+  width: 100px;
+}
+.category span{
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: #6f6e6e;
+  justify-content: center;
+  font-weight: bold;
+}

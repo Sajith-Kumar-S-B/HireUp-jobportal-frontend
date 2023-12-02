@@ -1,0 +1,136 @@
+.jobs{
+    background-color: #fafafa;
+    display: grid;
+    grid-template-columns: 70% auto;
+    padding: 2rem;
+    margin-top: 100px;
+    column-gap: 1rem;
+}
+
+
+
+.left{
+    background-color: white;
+    padding: 2rem 2rem;
+
+}
+
+
+.left h4{
+    font-weight: bold;
+}
+
+.right{
+   
+   padding: 2rem;
+    background-color: white;
+
+}
+
+
+.JobList h5{
+
+    font-weight: bold;
+}
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.pagination button{
+    
+}
+
+
+
+.Salary{
+
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+}
+
+
+.salary_search{
+    display: flex;
+   margin: auto;
+    width: 70%;
+  }
+
+.salary_search input{
+  width: 100%;
+  padding: .8rem 1rem;
+  outline: none;
+ border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+
+}
+
+.salary_search button{
+    background-color: #151f63;
+    padding: 10px 20px;
+    color: #fafafa;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.salary_card_div{
+    display: grid;
+   padding: 2rem 2rem;
+    grid-template-columns:auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem auto;
+    
+}
+
+
+.salary_card{
+    background-color: #fafafa;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #151f63;
+}
+
+.salary_card h5{
+    font-weight: 600;
+    color: #151f63;
+}
+
+
+
+.salary_component{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+
+/* job details */
+
+
+.jobDetails{
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+}
+
+
+.jobDetails button{
+    background-color: #151f63;
+    padding: 5px 20px;
+    color: #fafafa;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+}

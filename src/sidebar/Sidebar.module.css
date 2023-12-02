@@ -1,0 +1,95 @@
+.sidebar{
+    padding: 1rem;
+}
+
+.sidebar h5{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+
+.Location h6{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.Salary h6{
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Salary_type{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.sidebar_label_container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sidebar_label_container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sidebar_label_container .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+
+}
+
+
+.sidebar_label_container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .sidebar_label_container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .sidebar_label_container .checkmark:after {
+    top: 6.4px;
+    left: 6.4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+  }
+
+
+  .button{
+    padding: 10px 20px;
+    border: 1px solid #eee;
+  }
+
+  .button:hover{
+    background-color: #7e7e92;
+    color: white;
+  }
+  
+
+ 

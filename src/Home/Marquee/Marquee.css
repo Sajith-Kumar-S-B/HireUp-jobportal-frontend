@@ -1,0 +1,27 @@
+
+.title{
+    width: 100%;
+   margin-bottom: 4rem;
+}
+
+.title h3{
+    text-align: center;
+   font-weight: 700;
+   font-size: 40px;
+}
+
+
+.image_wrap{
+    margin: 8px 30px;
+}
+
+.image_wrap img{
+width: 100%;
+}
+
+
+.marquee{
+    border: 1px solid #eee;
+    padding: 40px 0;
+    
+}
