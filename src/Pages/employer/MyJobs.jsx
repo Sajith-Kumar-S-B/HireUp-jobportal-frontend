@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../../Components/Header/Header'
 import { BASE_URL } from '../../services/baseUrl'
 import styles from './PostAJob.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { userDataContext } from '../../Contexts/Authorize'
+import { TokenAuthContext } from '../../Contexts/TokenAuth'
 
 function MyJobs() {
   const navigate = useNavigate()
+  const {userData,setUserData} = useContext(userDataContext)
+  const {sessionStore,setSessionStore} = useContext(TokenAuthContext)
 
     const [jobs,setJobs] = useState([])
     const [searchText,setSearchText] = useState("")
@@ -17,7 +21,7 @@ const [currentPage,setCurrentPage] = useState(1)
 const itemsPerPage = 4
     useEffect(()=>{
         setLoading(true)
-           fetch(`${BASE_URL}/my-jobs/sajith@gmail.com`).then((res)=>res.json()).then((data)=>{
+           fetch(`${BASE_URL}/my-jobs/${userData?.email || sessionStore?.email}`).then((res)=>res.json()).then((data)=>{
             setJobs(data)
             setLoading(false)
            })

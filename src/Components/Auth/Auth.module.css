@@ -134,4 +134,30 @@
 
 
 
+/* edit profile */
+
+
+.userDetails{
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   
+  }
+
+
+  .userDetails img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  .userDetails h6{
+    font-weight: 600;
+    margin: auto;
+  }
+
+
+
 

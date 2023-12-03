@@ -1,34 +1,60 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
 import { SearchSection } from "../Components/jobsection/SearchSection";
 import { Card } from "../Components/jobsection/card/Card";
 import JobList from "./JobList";
 import styles from "./Jobs.module.css";
+import { signOut } from 'firebase/auth';
 import { Sidebar } from "../sidebar/Sidebar";
 import { BASE_URL } from "../services/baseUrl";
+import { AuthorisationContext, UserAuthorisationContext, userDataContext } from "../Contexts/Authorize";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/firebase.config";
+import { TokenAuthContext } from "../Contexts/TokenAuth";
 function Jobs() {
+  const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
+  const {userData,setUserData} = useContext(userDataContext)
+  const {sessionStore,setSessionStore} = useContext(TokenAuthContext)
+  const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
+
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-
   const itemsPerPage = 6;
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [jobs, setJobs] = useState([]);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    setLoading(true);
-    fetch(`${BASE_URL}/all-jobs`)
+    if(isAuthorized){
+      fetch(`${BASE_URL}/my-jobs/${userData?.email || sessionStore?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data)
         setJobs(data);
         setLoading(false);
       });
+    }else{
+      fetch(`${BASE_URL}/all-jobs`)
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data)
+        setJobs(data);
+        setLoading(false);
+      });
+      
+    }
+
+    
+    
   }, []);
 
   // console.log(jobs);
 
-  const [query, setQuery] = useState("");
+
+  
+
   // console.log(query);
 
   // category by title
