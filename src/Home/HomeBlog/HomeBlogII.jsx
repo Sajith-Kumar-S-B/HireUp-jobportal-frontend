@@ -29,7 +29,7 @@ A free applicant tracking system, or free integration with any ATS you may alrea
     Connect directly with founders at top startups - no third party recruiters allowed
     
 </p>
-<div>
+<div >
  <button>   Learn more</button>
   <button>  Sign up now</button>
 </div>

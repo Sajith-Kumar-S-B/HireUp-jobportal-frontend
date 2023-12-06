@@ -80,8 +80,8 @@ const prevPage = ()=>{
     <div className={styles.myJobs_div}>
         <h1>All Jobs</h1>
         <div  className={styles.myJobs_search}>
-            <input onChange={e=>setSearchText(e.target.value)} name='search' type="search" />
-            <button onClick={handleSearch}>   <i className="fas fa-magnifying-glass"></i></button>
+            <input onChange={e=>setSearchText(e.target.value)} placeholder='Search jobs by title' name='search' type="search" />
+            <button onClick={handleSearch}> <i className="fas fa-magnifying-glass"></i></button>
         </div>
     </div>
     {/* table */}

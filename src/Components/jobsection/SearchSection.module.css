@@ -4,7 +4,7 @@
     height: 80px;
     left: 0;
     right: 0;
-    top: 40%;
+    top: 35%;
     display: inline-flex;
       padding: 0 20px;
   margin: auto;
@@ -65,15 +65,15 @@
   }
   
   
-  .homeText h1{
-    font-size: 4rem;
+  .homeText h2{
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
   
   .homeText p{
   
-    font-size: medium;
+    font-size:large;
     margin-bottom: 2rem;
   
   }
@@ -111,7 +111,7 @@
 
 
 .sidebar_label_container input:checked ~ .checkmark {
-    background-color: #2196f3;
+    background-color: #151f63;
   }
   
   .checkmark:after {

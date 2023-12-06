@@ -50,3 +50,12 @@
   justify-content: center;
   font-weight: bold;
 }
+
+
+@media (max-width:750px){
+ 
+
+  .Link{
+    flex-direction: column;
+  }
+}

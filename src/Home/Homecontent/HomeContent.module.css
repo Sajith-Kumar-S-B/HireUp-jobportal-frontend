@@ -2,37 +2,49 @@
     display: grid;
     grid-template-columns: 50% auto;
   width: 100%;
-    height: 800px;
+    height: auto;
     margin-top: 1.5rem;
 }
 
 
-.homeImage{
+.swiper .homeImage{
   width: 100%;
-    background-color:#e8e3f8 ;
-    padding: 100px;
+  height: 100%;
+
+}
+.swiper_slide .imageBg{
+  background: linear-gradient(#fac6b8,#151f63);
+  border-radius: 100px 100px 100px 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow: hidden;
 }
 
-.homeImage img{
+
+
+.swiper_slide img{
   width: 100%;
+  height: 100%;
+ 
+ border-radius: 10px 0 0 10px;
  
 }
 
 
 .homeText{
   width: 100%;
-
+  height: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
   padding:0 80px;
+  order: 1;
 }
 
 
 .homeText h1{
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .homeText p{
@@ -45,6 +57,7 @@ justify-content: center;
 
 .homeButton{
   width: 100%;
+ 
   display: inline-flex;
   justify-content: flex-start;
   gap: 1rem;
@@ -76,6 +89,7 @@ outline: none;
   background-color: #fff;
   border-radius: 50px;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  z-index: 999;
 }
 
 
@@ -111,6 +125,21 @@ outline: none;
 }
 
 
+.swiper{
+  width: 100%;
+  height: 100%;
+  order: 2;
+}
+
+
+.swiper .swiper_slide{
+  background-color:#e8e3f8 ;
+padding: 100px;
+ width: 100%;
+ border-radius: 10px 0 0 100px;
+}
+
+
 
 @media (max-width:852px){
 
@@ -121,15 +150,52 @@ outline: none;
 
   .homeSearch{
     width: 95%;
+    height: 50px;
     top: 10%;
     left: 0;
     right: 0;
     margin: auto;
   }
 
+  .home_details{
+    height: 50%;
+    padding: 0;
+  }
+
 
   .homeText{
-    margin-top: 15%;
+    margin-top: 20%;
+    padding: 0 20px;
+    order: 2;
+  }
+
+  .homeText h1{
+    font-size: 2rem;
+  }
+
+  .homeText p{
+    margin-bottom: 1rem;
+  }
+
+  .homeButton button{
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: .5rem;
+  }
+
+  .home_search{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+  }
+
+  .home_details input{
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .swiper{
+    order: 1;
   }
 }
 

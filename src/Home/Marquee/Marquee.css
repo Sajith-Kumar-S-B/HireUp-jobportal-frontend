@@ -12,6 +12,7 @@
 
 
 .image_wrap{
+  
     margin: 8px 30px;
 }
 
@@ -24,4 +25,47 @@ width: 100%;
     border: 1px solid #eee;
     padding: 40px 0;
     
+}
+
+
+.signup{
+    margin: 2rem auto;
+    text-align: center;
+    background-color: #151f63;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 80px;
+   width: 150px;
+   font-size: 20px;
+  
+}
+
+
+.marquee-section{
+    width: 100%;
+}
+
+
+@media (max-width:750px){
+    .marquee{
+        padding: 20px;
+    }
+
+    .image_wrap{
+  
+        margin: 8px 20px;
+    }
+
+    .title h3{
+       
+      
+       font-size: 30px;
+    }
+
+    .signup{
+        width: 100px;
+        font-size: 14px;
+    }
 }

@@ -137,7 +137,7 @@ const {email,password} = recruitData
          <div className={styles.login_form} >
        <h3>   Login   </h3>
        <p>Find the job made for you</p>
-       <input onChange={(e)=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="text" />
+       <input onChange={(e)=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="email" />
        <input onChange={(e)=>setRecruitData({...recruitData,password:e.target.value})} value={recruitData.password} placeholder='Password' type="password" />
        <div className={styles.breakText}>
       &mdash;&mdash;&mdash;&mdash;&mdash;    <span> or Login with Google </span>   &mdash;&mdash;&mdash;&mdash;&mdash;

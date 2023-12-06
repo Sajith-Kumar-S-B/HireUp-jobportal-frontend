@@ -32,6 +32,7 @@
    
     width: 100%;
     height: 100%;
+    order: unset;
    
 }
 
@@ -60,4 +61,47 @@
 
 
 
+.homeBlog_content button{
+    background-color: #151f63;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
 
+
+
+@media (max-width:750px){
+   
+  .homeBlog{
+    height: auto;
+  }
+
+  .homeBlog2{
+    height: auto;
+  }
+
+
+  .parallax{
+
+    width: 100%;
+    height: 60vh;
+    order: 2;
+  }
+
+  .homeBlog_content{
+    height: 80vh;
+  }
+    .homeBlog_divOne{
+        grid-template-columns:100%;
+        width: 95%;
+        background-color: transparent;
+    }
+
+    .homeBlog_content{
+        width: 90%;
+    }
+
+    
+}

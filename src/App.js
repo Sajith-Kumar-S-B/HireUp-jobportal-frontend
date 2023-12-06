@@ -13,10 +13,13 @@ import AverageSalary from './Pages/user/AverageSalary';
 import UpdateJob from './Pages/employer/UpdateJob';
 import { BASE_URL } from './services/baseUrl';
 import JobDetails from './Pages/JobDetails';
+import { AuthorisationContext, UserAuthorisationContext } from './Contexts/Authorize';
+import { useContext } from 'react';
 
 function App() {
 
-  
+  const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
+    const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
   return (
     <>
 
@@ -28,10 +31,10 @@ function App() {
       <Route   path='/recruit/signup' element={<RecruitAuth />} />
       <Route   path='/recruit/login' element={<RecruitAuth login/>} />
 
-      <Route   path='/jobs' element={<Jobs/>} />
-      <Route   path='/post-job' element={<PostAJob/>} />
-      <Route   path='/my-jobs' element={<MyJobs/>} />
-      <Route   path='/salary' element={<AverageSalary/>} />
+      <Route   path='/jobs' element={isAuthorized || isUserAuthorized? <Jobs/>:<Home/>} />
+      <Route   path='/post-job' element={isAuthorized?<PostAJob/>:<Home/>} />
+      <Route   path='/my-jobs' element={isAuthorized?<MyJobs/>:<Home/>} />
+      <Route   path='/salary' element={ <AverageSalary/>} />
       <Route   path='/update-job/:id' element={<UpdateJob/>}  />
       <Route   path='/job/:id' element={<JobDetails/>}  />
 

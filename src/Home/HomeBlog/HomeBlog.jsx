@@ -38,8 +38,8 @@ function HomeBlog() {
         
     </p>
     <div>
-     <button>   Learn more</button>
-      <button>  Sign up now</button>
+     <button>Learn more</button>
+      <button>Sign up now</button>
     </div>
              </div>
     

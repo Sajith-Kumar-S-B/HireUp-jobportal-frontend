@@ -18,7 +18,7 @@ import Marquee from "react-fast-marquee";
 
 function Marquees() {
   return (
-    <div>
+    <div className="marquee_section">
       <div className="title">
         <h3>Join the 100K+ startups building <br /> their teams with us</h3>
       </div>
@@ -33,6 +33,7 @@ function Marquees() {
 
        
       </Marquee>
+      <div className="signup">Signup</div>
     </div>
   );
 }

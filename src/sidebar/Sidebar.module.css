@@ -10,13 +10,19 @@
 
 .Location h6{
     font-weight: 500;
+    margin-top: 1rem;
+   display: inline-flex;
+   
     margin-bottom: 1rem;
+    font-size: large;
 }
 
 .Salary h6{
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: large;
+
 }
 
 .Salary_type{

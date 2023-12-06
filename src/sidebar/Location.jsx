@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 import { InputField } from "../Components/jobsection/InputField";
+import { CiLocationOn } from "react-icons/ci";
 export const Location = ({ handleChange }) => {
   return (
     <div className={styles.Location}>
-      <h6>Location</h6>
+      <h6><CiLocationOn />Location</h6>
       <div>
         <label className={styles.sidebar_label_container}>
           <input

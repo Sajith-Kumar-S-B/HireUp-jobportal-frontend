@@ -151,7 +151,7 @@ function Register({login}) {
        <h3>   Login   </h3>
        <p>Find the job made for you</p>
       <form>
-         <input onChange={(e)=>setUserLogin({...userLogin,email:e.target.value})} value={userLogin.email} placeholder='Email' type="text" />
+         <input onChange={(e)=>setUserLogin({...userLogin,email:e.target.value})} value={userLogin.email} placeholder='Email' type="emai" />
          <input onChange={(e)=>setUserLogin({...userLogin,password:e.target.value})} value={userLogin.password} placeholder='Password' type="password" />
       </form>
        <div className={styles.breakText}>

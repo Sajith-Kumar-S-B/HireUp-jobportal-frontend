@@ -21,9 +21,11 @@ function EditProfile() {
      const [preview,setPreview] = useState("")
      useEffect(()=>{
       const user = JSON.parse(sessionStorage.getItem("registeredUser"))
-   
-      setUserProfile({...userProfile,username:user.username,email:user.email,password:user.password,fullname:user.fullname,alternatemail:user.alternatemail,about:user.about,profile:""})
-       setExistingImage(user.profile)
+   if(user){
+    setUserProfile({...userProfile,username:user.username,email:user.email,password:user.password,fullname:user.fullname,alternatemail:user.alternatemail,about:user.about,profile:""})
+    setExistingImage(user.profile)
+   }
+      
      
     },[show])   
   
@@ -90,11 +92,11 @@ function EditProfile() {
     <>
      <div onClick={() => setShow(!show)}>
          { isAuthorized  &&  <div className={styles.userDetails}>
-                <img src={userData?.photoURL || userImg || `${BASE_URL}/uploads/${existingImage}`} alt="" />
+                <img src={userData?.photoURL || userImg } alt="" />
                 <h6>{userData?.displayName || sessionStore?.username}</h6>
                 </div>}
                 { isUserAuthorized  && <div className={styles.userDetails}>
-                <img src={userData?.photoURL || userImg || `${BASE_URL}/uploads/${existingImage}`} alt="userimage" />
+                <img src={userData?.photoURL || userImg} alt="userimage" />
                 <h6>{userData?.displayName || sessionStore?.username}</h6>
                 </div>}
      </div> 

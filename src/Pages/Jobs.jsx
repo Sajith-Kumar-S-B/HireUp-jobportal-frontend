@@ -11,6 +11,7 @@ import { AuthorisationContext, UserAuthorisationContext, userDataContext } from 
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase/firebase.config";
 import { TokenAuthContext } from "../Contexts/TokenAuth";
+import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
 function Jobs() {
   const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
   const {userData,setUserData} = useContext(userDataContext)
@@ -170,7 +171,7 @@ function Jobs() {
       {result.length > 0 ? (
         <div className={styles.pagination}>
           <button onClick={previousPage} disabled={currentPage === 1}>
-            Previous
+          <FaArrowLeft />
           </button>
           <span>
             Page {currentPage} of{" "}
@@ -182,7 +183,7 @@ function Jobs() {
               currentPage === Math.ceil(filteredItems.length / itemsPerPage)
             }
           >
-            Next
+           <FaArrowRight />
           </button>
         </div>
       ) : (

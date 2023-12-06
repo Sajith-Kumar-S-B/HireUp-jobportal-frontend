@@ -7,6 +7,7 @@ import HomeBlog from '../Home/HomeBlog/HomeBlog'
 import HomeBlogII from '../Home/HomeBlog/HomeBlogII'
 import Marquees from '../Home/Marquee/Marquee'
 import HomeSectiontwo from '../Home/Homesection/HomeSectiontwo'
+import { Category } from '../Components/category/Category'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
 <HomeBlog/>
 <HomeBlogII/>
 <HomeSectiontwo/>
+<Category/>
 <Footer/>
     </div>
   )

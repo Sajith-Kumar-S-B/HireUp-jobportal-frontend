@@ -3,7 +3,7 @@ import styles from '../Jobs.module.css'
 import Header from '../../Components/Header/Header'
 import { PageHeader } from '../../Components/jobsection/PageHeader'
 import { Link } from 'react-router-dom'
-
+import Footer from '../../Components/Footer/Footer'
 
 function AverageSalary() {
     const [searchText,setSearchText] = useState("")
@@ -27,7 +27,7 @@ function AverageSalary() {
 
 <PageHeader title={"Estimate Salary"} path={"Salary"} />
 <div  className={styles.salary_search}>
-            <input onChange={e=>setSearchText(e.target.value)} name='search' id='search' type="search" />
+            <input onChange={e=>setSearchText(e.target.value)} name='search' placeholder='Enter a Job Title' id='search' type="search" />
             <button onClick={handleSalarySearch}> <i className="fas fa-magnifying-glass"></i></button>
         </div>
 
@@ -49,6 +49,7 @@ function AverageSalary() {
             }
         </div>
     </div>
+    <Footer/>
     </>
   )
 }

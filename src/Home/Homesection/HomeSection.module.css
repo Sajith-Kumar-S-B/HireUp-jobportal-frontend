@@ -95,7 +95,7 @@ top: 10%;
 .homeSection_text {
     position: absolute;
    text-align: center;
-   left: 40%;
+   left: 38%;
     top: 5%;
     display: flex;
     flex-direction: column;
@@ -149,6 +149,10 @@ top: 10%;
 .review_text{
     width: 80%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
 }
 
 
@@ -173,5 +177,46 @@ top: 10%;
    
   }
 
+  .review_text h6{
+ text-align: end;
+ font-size: large;
+  }
 
 
+
+@media (max-width:750px){
+    .homeSection_div{
+        width: 200%;
+        left: -50%;
+    }
+    .homeSection{
+      height: 700px;
+    }
+
+    .homeSection_div img{
+        width: 300px;
+        top: 5%;
+    }
+
+    .homeLogo{
+        width: 20px;
+        height: 20px;
+        top: 15%;
+    }
+
+    .review_bar{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .review_text p{
+        font-size: 12px;
+    }
+    .review_text h6{
+        font-size: 14px;
+    }
+
+    .swiper .swiper_slide{
+        flex-direction: column;
+    }
+}

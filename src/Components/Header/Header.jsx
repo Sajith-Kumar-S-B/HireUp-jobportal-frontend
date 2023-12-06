@@ -8,6 +8,7 @@ import { auth } from '../../firebase/firebase.config';
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import EditProfile from '../Auth/EditProfile';
+import logoImg from '../../Assets/6480c35745aef364b9b9698d_Brand Logo.png'
 function Header() {
 const navigate = useNavigate()
   const [showNavbar, setShowNavbar] = useState(false)
@@ -54,7 +55,8 @@ const navigate = useNavigate()
       <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logo}>
-        HireFound
+        
+        HireUp
         </div>
         <div className={styles.menu_icon} onClick={handleShowNavbar}>
          { showNavbar? <CloseIcon/> : <MenuIcon/>}
@@ -70,9 +72,9 @@ const navigate = useNavigate()
             <li>
               <NavLink to="/jobs">Jobs</NavLink>
             </li>
-            <li>
+            {isUserAuthorized && <li>
               <NavLink to="/salary">Salary Estimate</NavLink>
-            </li>
+            </li>}
             {isAuthorized && <li>
               <NavLink to="/post-job">Post A Job</NavLink>
             </li>}

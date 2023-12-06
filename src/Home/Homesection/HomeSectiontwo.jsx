@@ -1,6 +1,10 @@
 import React from 'react'
 import styles from "./HomeSection.module.css";
 import reviewImg from '../../Assets/Professional Woman.webp'
+import reviewImg2 from '../../Assets/Male Portrait.webp'
+import reviewImg3 from '../../Assets/Professional Female .webp'
+
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation ,EffectFade} from "swiper/modules";
 
@@ -54,7 +58,8 @@ function HomeSectiontwo() {
                   </div>
                   <div className={styles.review_text} >
                   
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
+    <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
                   </div>
                 </div> 
                 </SwiperSlide>
@@ -65,7 +70,55 @@ function HomeSectiontwo() {
                   </div>
                   <div className={styles.review_text} >
                   
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
+                  </div>
+                </div> </SwiperSlide>
+        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
+                  <div className={styles.review_img}>
+                    <img src={reviewImg2} alt="" />
+                  </div>
+                  <div className={styles.review_text} >
+                  
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
+                  </div>
+                </div> </SwiperSlide>
+        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
+                  <div className={styles.review_img}>
+                    <img src={reviewImg3} alt="" />
+                  </div>
+                  <div className={styles.review_text} >
+                  
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
+                  </div>
+                </div> </SwiperSlide>
+        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
+                  <div className={styles.review_img}>
+                    <img src={reviewImg} alt="" />
+                  </div>
+                  <div className={styles.review_text} >
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
+                  </div>
+                </div> </SwiperSlide>
+        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
+                  <div className={styles.review_img}>
+                    <img src={reviewImg} alt="" />
+                  </div>
+                  <div className={styles.review_text} >
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
+                  </div>
+                </div> </SwiperSlide>
+        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
+                  <div className={styles.review_img}>
+                    <img src={reviewImg} alt="" />
+                  </div>
+                  <div className={styles.review_text} >
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
                   </div>
                 </div> </SwiperSlide>
         <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
@@ -74,52 +127,8 @@ function HomeSectiontwo() {
                   </div>
                   <div className={styles.review_text} >
                   
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
-                  </div>
-                </div> </SwiperSlide>
-        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
-                  <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
-                  </div>
-                  <div className={styles.review_text} >
-                  
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
-                  </div>
-                </div> </SwiperSlide>
-        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
-                  <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
-                  </div>
-                  <div className={styles.review_text} >
-                  
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
-                  </div>
-                </div> </SwiperSlide>
-        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
-                  <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
-                  </div>
-                  <div className={styles.review_text} >
-                  
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
-                  </div>
-                </div> </SwiperSlide>
-        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
-                  <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
-                  </div>
-                  <div className={styles.review_text} >
-                  
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
-                  </div>
-                </div> </SwiperSlide>
-        <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
-                  <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
-                  </div>
-                  <div className={styles.review_text} >
-                  
-    I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.
+                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+    <h6>-Robert Angel</h6>
                   </div>
                 </div> </SwiperSlide>
       </Swiper>

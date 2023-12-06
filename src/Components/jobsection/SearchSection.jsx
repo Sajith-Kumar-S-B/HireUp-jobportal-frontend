@@ -7,7 +7,8 @@ export const SearchSection = ({query,setQuery}) => {
     <>
         <div className={styles.searchSection}>
         <div className={styles.homeText}>
-          <h1>Experience the new way to work</h1>
+          <h2>You have a job.
+We have 8m+ job seekers.</h2>
           <p>See jobs we've picked just for you</p>
           </div>
             <div className={styles.homeSearch}>

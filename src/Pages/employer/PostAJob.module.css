@@ -148,6 +148,7 @@ color: gray;
 
 .myJobs_search{
     display: flex;
+    width: 100%;
 
 }
 .myJobs_search input{
@@ -156,6 +157,8 @@ color: gray;
     outline: none;
    border: 1px solid #ddd;
     border-right: none;
+    border-radius: 10px 0 0 10px;
+
 }
 
 
@@ -173,6 +176,7 @@ color: gray;
     background-color: #fff;
     padding: 1rem 0;
     width: 100%;
+
 }
 
 .myJobs_table_div{
@@ -187,7 +191,9 @@ color: gray;
    text-align: center;
    background-color: #fafafa;
    border-collapse: collapse;
-   margin-bottom: 2rem;
+   margin-bottom: 2rem;  
+    overflow-x: auto;
+
 }
 
 .myJobs_table_header{
@@ -195,6 +201,15 @@ color: gray;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.myJobs_table_header button{
+    background-color:#151f63;
+    padding: 10px 20px;
+    margin-bottom: 2rem;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
 }
 
 
@@ -208,8 +223,28 @@ color: gray;
     
 }
 
+.table_body{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
+}
+.table_body tr{
+    border: 1px solid #eee;
+}
+
 .table_body td{
     padding: 1rem;
+   
+
+}
+
+.table_body i{
+    color: #151f63;
+}
+.table_body button{
+    border:none;
+    background-color: transparent;
+    color: #151f63;
+
 }
 
 .pagination{
@@ -232,5 +267,22 @@ color: gray;
 
     .form_title_div{
         width: 100%;
+    }
+
+
+    .myJobs{
+        margin-top: 50px;
+    }
+
+    .myJobs_div{
+        width: 90%;
+    }
+
+    .myJobs_table_div{
+        width: 90%;
+    }
+
+    .myJobs_search input{
+        padding: .5rem .6rem;
     }
 }
