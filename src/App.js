@@ -15,9 +15,9 @@ import { BASE_URL } from './services/baseUrl';
 import JobDetails from './Pages/JobDetails';
 import { AuthorisationContext, UserAuthorisationContext } from './Contexts/Authorize';
 import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 
 function App() {
-
   const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
     const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
   return (

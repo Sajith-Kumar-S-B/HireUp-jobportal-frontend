@@ -7,11 +7,14 @@ import { Link} from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation ,EffectFade} from "swiper/modules";
 import Type from "../../Components/Type";
+import { useSelector } from "react-redux";
 
 function HomeContent() {
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
   return (
     <>
-      <div className={styles.homeContent}>
+      <div className={`${styles.homeContent} ${darkMode ? styles['dark'] : styles['light'] }`}>
         <div className={styles.homeSearch}>
             <div className={styles.home_details}>
               <input placeholder="Find jobs that matches you" type="text" />

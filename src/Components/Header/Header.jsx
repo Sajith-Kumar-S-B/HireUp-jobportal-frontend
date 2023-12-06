@@ -8,9 +8,13 @@ import { auth } from '../../firebase/firebase.config';
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import EditProfile from '../Auth/EditProfile';
-import logoImg from '../../Assets/6480c35745aef364b9b9698d_Brand Logo.png'
+import { useSelector } from 'react-redux';
+import ThemeToggle from '../../redux/themeToggle';
+import Icon from '@mdi/react';
+import { mdiHumanGreetingProximity } from '@mdi/js';
 function Header() {
 const navigate = useNavigate()
+const darkMode = useSelector((state) => state.theme.darkMode);
   const [showNavbar, setShowNavbar] = useState(false)
   const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
   const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
@@ -52,11 +56,11 @@ const navigate = useNavigate()
   
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${darkMode ? styles['dark'] : styles['light'] }`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-        
-        HireUp
+        <Icon path={mdiHumanGreetingProximity} size={2} />
+        <h4>HireUp</h4>
         </div>
         <div className={styles.menu_icon} onClick={handleShowNavbar}>
          { showNavbar? <CloseIcon/> : <MenuIcon/>}
@@ -70,11 +74,13 @@ const navigate = useNavigate()
               <NavLink to="/my-jobs">My Jobs</NavLink>
             </li>}
             <li>
-              <NavLink to="/jobs">Jobs</NavLink>
+     {isAuthorized || isUserAuthorized ? <NavLink to="/jobs">Jobs</NavLink>: <NavLink to="/user/signup">For Job Seekers</NavLink>}
             </li>
-            {isUserAuthorized && <li>
-              <NavLink to="/salary">Salary Estimate</NavLink>
-            </li>}
+          
+             {isUserAuthorized && <li> <NavLink to="/salary">Salary Estimate</NavLink></li> }
+             
+            
+           {!isAuthorized && !isAuthorized &&  <li> <NavLink to="/recruit/signup">For Companies</NavLink> </li>}
             {isAuthorized && <li>
               <NavLink to="/post-job">Post A Job</NavLink>
             </li>}
@@ -82,11 +88,14 @@ const navigate = useNavigate()
            
             <EditProfile/>
             </li>
+            <li>
+              <ThemeToggle/>
+            </li>
           <li>
              {isAuthorized || isUserAuthorized ? 
              ( <div onClick={Logout || handleLogout}><h5>Logout</h5></div>): (
              <div className={styles.loginDrop}>
-                  <h5>Login</h5>
+                  <h5><NavLink className={styles.link} to={"/user/login"}>Login</NavLink></h5>
                   <div className={styles.dropContent}>
                  <p> <NavLink to="/user/login">Job Seeker</NavLink></p>
                <p>   <NavLink to="/recruit/login">Recruiter</NavLink></p>

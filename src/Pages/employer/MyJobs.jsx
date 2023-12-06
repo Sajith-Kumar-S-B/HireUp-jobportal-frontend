@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { userDataContext } from '../../Contexts/Authorize'
 import { TokenAuthContext } from '../../Contexts/TokenAuth'
+import { deleteProjectResponseContext } from '../../Contexts/ContextShare'
 
 function MyJobs() {
   const navigate = useNavigate()
@@ -70,7 +71,6 @@ const prevPage = ()=>{
       })
 
     }
-   
    
     console.log(searchText);
   return (

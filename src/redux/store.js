@@ -1,10 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit'
-import googleReducer from './slices/authSlice'
+import themeReducer from './themeReducer'
+import rootReducer from './rootReducer'
 const store = configureStore({
-    reducer:{
-       auth: googleReducer
-    }
-})
+    reducer:rootReducer})
 
 
 

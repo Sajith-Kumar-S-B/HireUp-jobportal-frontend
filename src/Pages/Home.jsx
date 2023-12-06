@@ -8,10 +8,14 @@ import HomeBlogII from '../Home/HomeBlog/HomeBlogII'
 import Marquees from '../Home/Marquee/Marquee'
 import HomeSectiontwo from '../Home/Homesection/HomeSectiontwo'
 import { Category } from '../Components/category/Category'
+import styles from "./Jobs.module.css";
+import { useSelector } from 'react-redux'
 
 function Home() {
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
   return (
-    <div>
+    <div className={`${styles.home} ${darkMode ? styles['dark'] : styles['light'] }`}>
 <Header/>
 <HomeContent/>
 <HomeSection/>

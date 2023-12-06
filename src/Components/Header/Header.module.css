@@ -1,5 +1,30 @@
 
-  
+.light {
+  --clr-bg: #fff;
+  --clr-bg-alt:#f5f5f5;
+  --clr-fg: #f8f8f8;
+  --clr-fg-alt: none;
+    --clr-primary: #ffffff;
+    --clr-lg:#000;
+    --clr-mode:#fff;
+
+
+ 
+}
+
+.dark{
+
+  --clr-bg: #36474f;
+  --clr-bg-alt: #18212a;
+  --clr-fg: #23283e;
+  --clr-fg-alt: #cdcdff;
+  --clr-primary: #36474f;
+--clr-lg:#ffffff;
+--clr-mode:#dcdcdc;
+ 
+}
+
+
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -13,11 +38,15 @@
   
   .navbar {
     height: 60px;
-    /* background-color: #e8e3f8; */
+    background-color:var(--clr-bg);
     position: relative;
   }
   
   .logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-lg)
   }
   
   .menu_icon {
@@ -44,7 +73,7 @@
   .nav_elements ul a {
     font-size: 16px;
     font-weight: 400;
-    color: #2f234f;
+    color: var(--clr-lg);
     text-decoration: none;
   }
   
@@ -69,11 +98,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: #ffffff;
   }
   .loginDrop .dropContent{
     display: none;
     position: absolute;
-    top: 70%;
+    top: 80%;
     background-color: #ffffff;
     width: 150px;
    padding-top: 10px;
@@ -100,6 +130,15 @@
     display: block;
   }
   
+
+  .loginDrop h5 .link{
+    background-color: #2f234f;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 2px solid var(--clr-lg);
+  }
 
   
   
