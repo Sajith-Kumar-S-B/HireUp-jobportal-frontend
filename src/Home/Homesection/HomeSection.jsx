@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./HomeSection.module.css";
 import homeImage2 from '../../Assets/Group19.webp'
-
+import Icon from '@mdi/react';
+import { mdiHumanGreetingProximity } from '@mdi/js';
 
 function HomeSection() {
   return (
@@ -19,7 +20,9 @@ function HomeSection() {
        <p>Find work that works for you</p>
        </div>
         <img src={homeImage2} alt="" />
-        <div className={styles.homeLogo}></div>
+        <div className={styles.homeLogo}>
+        <Icon className={styles.icon}  style={{width:'100%',padding:'5px'}} path={mdiHumanGreetingProximity} size={2} />
+        </div>
       </div>
 
      

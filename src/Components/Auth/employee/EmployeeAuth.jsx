@@ -10,7 +10,8 @@ import { auth } from '../../../firebase/firebase.config';
 import { AuthorisationContext, UserAuthorisationContext, userDataContext } from '../../../Contexts/Authorize';
 import { LoginAPI, registerAPI } from '../../../services/allApi';
 import { TokenAuthContext } from '../../../Contexts/TokenAuth';
-
+import Icon from '@mdi/react';
+import { mdiHumanGreetingProximity } from '@mdi/js';
 
 function Register({login}) {
   const navigate = useNavigate()
@@ -146,7 +147,10 @@ function Register({login}) {
          </div>
     </div>
      <div className={styles.login_two}>
-         <div>logo</div>
+     <div className={styles.logo}>
+        <Icon path={mdiHumanGreetingProximity} size={2} />
+        <h4>HireUp</h4>
+        </div>
          <div className={styles.login_form} >
        <h3>   Login   </h3>
        <p>Find the job made for you</p>
@@ -169,7 +173,10 @@ function Register({login}) {
     
         
     <div className={styles.login_two}>
-        <div>logo</div>
+    <div className={styles.logo}>
+        <Icon path={mdiHumanGreetingProximity} size={2} />
+        <h4>HireUp</h4>
+        </div>
         <div className={styles.login_form} >
       <h3>   Create Account   </h3>
    <p>Find your Next Oppurtunity</p> 

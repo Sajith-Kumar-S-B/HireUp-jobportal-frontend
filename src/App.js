@@ -36,7 +36,7 @@ function App() {
       <Route   path='/my-jobs' element={isAuthorized?<MyJobs/>:<Home/>} />
       <Route   path='/salary' element={ <AverageSalary/>} />
       <Route   path='/update-job/:id' element={<UpdateJob/>}  />
-      <Route   path='/job/:id' element={<JobDetails/>}  />
+      <Route   path='/job/:id' element={isAuthorized || isUserAuthorized?<JobDetails/>:<Home/>}  />
 
 
       

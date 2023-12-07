@@ -5,6 +5,10 @@ import { BASE_URL } from '../services/baseUrl'
 import styles from './Jobs.module.css'
 import Swal from 'sweetalert2'
 import { PageHeader } from '../Components/jobsection/PageHeader'
+
+import Icon from '@mdi/react';
+import { mdiPlusBoxMultipleOutline } from '@mdi/js';
+
 function JobDetails() {
     const navigate = useNavigate()
     const {id} = useParams()
@@ -49,10 +53,34 @@ function JobDetails() {
     <Header/>
    
     <div className={styles.jobDetails}>
-    <PageHeader title={"Single Job"} path={"Apply Job"} />
-        <h6>Job Id: {id}</h6>
-        <h2>{job?.jobTitle}</h2>
-        <button onClick={handleApply}>Apply Now</button>
+    <PageHeader title={"Get Started"} path={"Apply Job"} />
+      <div className={styles.singleContent}>
+         <div className={styles.singleContent_details}>
+  
+            <h6>Job Id: {id}</h6>
+            <h6>Posted on:{job?.postingDate}</h6>
+            <h4>Job Details</h4>
+            <h2>{job?.jobTitle}</h2>
+           
+          <div className={styles.single_buttons}> <button>{job?.employmentType}</button>  <button onClick={handleApply}>Apply Now</button></div>
+          <div>
+              <h5>Job Description</h5>
+              <p>{job?.description}</p>
+            </div>
+         </div>
+  
+         <div className={styles.company}>
+          <h5>Company Details</h5>
+          <div className={styles.companyTitle}>
+           
+            <img  src={job?.companyLogo} alt="" />
+            <h5>{job?.companyName}</h5>
+          </div>
+          <button style={{color:'#fff'}}><span ><Icon style={{color:'#fff'}} path={mdiPlusBoxMultipleOutline} size={1} />
+
+</span> Follow </button>
+         </div>
+      </div>
     </div>
     </>
   )

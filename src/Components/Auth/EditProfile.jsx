@@ -23,13 +23,18 @@ function EditProfile() {
       const user = JSON.parse(sessionStorage.getItem("registeredUser"))
    if(user){
     setUserProfile({...userProfile,username:user.username,email:user.email,password:user.password,fullname:user.fullname,alternatemail:user.alternatemail,about:user.about,profile:""})
-    setExistingImage(user.profile)
+    setExistingImage(user.profile )
    }
+
+   
       
      
     },[show])   
+
+
   
-   
+
+  
 
     useEffect(()=>{
       if(userProfile.profile){
@@ -92,11 +97,13 @@ function EditProfile() {
     <>
      <div onClick={() => setShow(!show)}>
          { isAuthorized  &&  <div className={styles.userDetails}>
-                <img src={userData?.photoURL || userImg } alt="" />
+                <img src={userData?.photoURL || userImg} alt="" />
                 <h6>{userData?.displayName || sessionStore?.username}</h6>
                 </div>}
                 { isUserAuthorized  && <div className={styles.userDetails}>
-                <img src={userData?.photoURL || userImg} alt="userimage" />
+                
+                <img src={userData?.photoURL || userImg } alt="userimage" />
+                
                 <h6>{userData?.displayName || sessionStore?.username}</h6>
                 </div>}
      </div> 
@@ -106,6 +113,7 @@ function EditProfile() {
         onHide={() => setShow(!show)}
         backdrop="static"
         keyboard={false}
+        className={styles.Modal}
       >
         <Modal.Header closeButton>
           <Modal.Title>Update Profile</Modal.Title>
@@ -143,7 +151,7 @@ function EditProfile() {
           <Button variant="secondary" onClick={() => setShow(!show)}>
             cancel
           </Button>
-          <Button type='submit'onClick={handleProfileUpdate}  variant="primary">update</Button>
+          <Button style={{backgroundColor:"#151f63"}} type='submit'onClick={handleProfileUpdate}  variant="primary">update</Button>
         </Modal.Footer>
       </Modal>
 

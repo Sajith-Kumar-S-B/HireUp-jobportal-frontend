@@ -26,17 +26,10 @@ function Jobs() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [jobs, setJobs] = useState([]);
   const [query, setQuery] = useState("");
+  const [location, setLocation] = useState("");
 
   useEffect(() => {
-    if(isAuthorized){
-      fetch(`${BASE_URL}/my-jobs/${userData?.email || sessionStore?.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data)
-        setJobs(data);
-        setLoading(false);
-      });
-    }else{
+   
       fetch(`${BASE_URL}/all-jobs`)
       .then((res) => res.json())
       .then((data) => {
@@ -45,7 +38,7 @@ function Jobs() {
         setLoading(false);
       });
       
-    }
+  
 
     
     
@@ -64,6 +57,13 @@ function Jobs() {
     (job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 
+  // category by location
+
+  const filteredLocation = jobs.filter(
+    (job) => job.jobLocation.toLowerCase().indexOf(location.toLowerCase()) !== -1
+  );
+
+  
   // console.log(filteredItems);
 
   // radio button filter
@@ -112,6 +112,12 @@ function Jobs() {
       filteredJobs = filteredItems;
     }
 
+
+    if(location){
+      filteredJobs = filteredLocation
+
+    }
+
     // category filtering
 
     if (selected) {
@@ -146,7 +152,7 @@ function Jobs() {
   return (
     <>
       <Header />
-      <SearchSection query={query} setQuery={setQuery} />
+      <SearchSection query={query} setQuery={setQuery} location={location} setLocation={setLocation} />
 
       {/* main content */}
       <div className={styles.jobs}>

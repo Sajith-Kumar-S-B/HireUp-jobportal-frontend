@@ -70,6 +70,10 @@
     font-weight: 700;
     margin-bottom: 1rem;
   }
+
+  .homeText span{
+    color: #e32e19;
+  }
   
   .homeText p{
   

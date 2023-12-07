@@ -20,7 +20,7 @@ const {_id,companyName,jobTitle,maxPrice,jobLocation,experienceLevel,companyLogo
             <span><FiCalendar/>{postingDate}</span>
 
           </div>
-          <p>{description}</p>
+          <p>{description.slice(0,100)}..see more..</p>
         </div>
        </Link>
     </section>

@@ -31,6 +31,8 @@ const darkMode = useSelector((state) => state.theme.darkMode);
       await signOut(auth);
       // Sign-out successful.
       setUserData({});
+      sessionStorage.removeItem("registeredUser")
+      sessionStorage.removeItem("token")
      setIsAuthorized(false)
      setIsUserAuthorized(false)
      toast.error("User Logged out")
@@ -67,22 +69,22 @@ const darkMode = useSelector((state) => state.theme.darkMode);
         </div>
         <div className={`${styles.nav_elements}  ${showNavbar && styles.active}`}>
           <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
+          {!isAuthorized && !isUserAuthorized &&  <li>
+              <NavLink className={styles.navlink}  to="/">Home</NavLink>
+            </li>}
            {isAuthorized && <li>
-              <NavLink to="/my-jobs">My Jobs</NavLink>
+              <NavLink  className={styles.navlink} to="/my-jobs">My Jobs</NavLink>
             </li>}
             <li>
-     {isAuthorized || isUserAuthorized ? <NavLink to="/jobs">Jobs</NavLink>: <NavLink to="/user/signup">For Job Seekers</NavLink>}
+     {isAuthorized || isUserAuthorized ? <NavLink  className={styles.navlink} to="/jobs">Jobs</NavLink>: <NavLink className={styles.navlink} to="/user/signup">For Job Seekers</NavLink>}
             </li>
           
-             {isUserAuthorized && <li> <NavLink to="/salary">Salary Estimate</NavLink></li> }
+             {isUserAuthorized && <li> <NavLink className={styles.navlink} to="/salary">Salary Estimate</NavLink></li> }
              
             
-           {!isAuthorized && !isAuthorized &&  <li> <NavLink to="/recruit/signup">For Companies</NavLink> </li>}
+           {!isAuthorized && !isAuthorized &&  <li> <NavLink className={styles.navlink} to="/recruit/signup">For Companies</NavLink> </li>}
             {isAuthorized && <li>
-              <NavLink to="/post-job">Post A Job</NavLink>
+              <NavLink className={styles.navlink} to="/post-job">Post A Job</NavLink>
             </li>}
             <li>
            
@@ -93,7 +95,7 @@ const darkMode = useSelector((state) => state.theme.darkMode);
             </li>
           <li>
              {isAuthorized || isUserAuthorized ? 
-             ( <div onClick={Logout || handleLogout}><h5>Logout</h5></div>): (
+             ( <div onClick={Logout || handleLogout}><h5 className={styles.logout}>Logout</h5></div>): (
              <div className={styles.loginDrop}>
                   <h5><NavLink className={styles.link} to={"/user/login"}>Login</NavLink></h5>
                   <div className={styles.dropContent}>

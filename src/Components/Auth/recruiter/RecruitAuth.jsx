@@ -126,7 +126,7 @@ const {email,password} = recruitData
              <img  src={loginImg} alt="" />
          </div>
          <div className={styles.login_text}>
-             <h3>Find the job made for you.</h3>
+             <h4>Find the perfect match for your Company.</h4>
              <p>Browse over 130K jobs at top companies and fast-growing startups.
 
 </p>
@@ -136,7 +136,7 @@ const {email,password} = recruitData
          <div>logo</div>
          <div className={styles.login_form} >
        <h3>   Login   </h3>
-       <p>Find the job made for you</p>
+       <p>Where the best startups find their teams</p>
        <input onChange={(e)=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="email" />
        <input onChange={(e)=>setRecruitData({...recruitData,password:e.target.value})} value={recruitData.password} placeholder='Password' type="password" />
        <div className={styles.breakText}>
@@ -157,7 +157,7 @@ const {email,password} = recruitData
         <div>logo</div>
         <div className={styles.login_form} >
       <h3>   Create Account   </h3>
-   <p>Find your Next Oppurtunity</p> 
+   <p>Where the best startups find their teams</p> 
     <input  onChange={e=>setRecruitData({...recruitData,username:e.target.value})} value={recruitData.username} placeholder='Username' type="text" />
 
     <input onChange={e=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="text" />
@@ -179,7 +179,7 @@ const {email,password} = recruitData
             <img  src={loginImg} alt="" />
         </div>
         <div className={styles.login_text}>
-            <h3>Find the job made for you.</h3>
+            <h4>Find the perfect match for your Company..</h4>
             <p>Browse over 130K jobs at top companies and fast-growing startups.
 
 </p>

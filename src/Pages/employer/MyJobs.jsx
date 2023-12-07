@@ -66,7 +66,7 @@ const prevPage = ()=>{
          
         if(data.acknowledged===true){
           toast.error("Job Deleted Successfully")
-        
+          setJobs((prevJobs) => prevJobs.filter((job) => job._id !== id));
         }
       })
 
