@@ -33,8 +33,8 @@ function HomeContent() {
           <h1><Type/></h1>
         
           <div className={styles.homeButton}>
-            <button>Find your next hire</button>
-            <button>Find your next Job</button>
+            <button><Link style={{textDecoration:'none',color:'white'}} to={"/recruit/signup"}>Find your next hire</Link></button>
+            <button><Link style={{textDecoration:'none',color:'white'}} to={"/user/signup"}>Find your next Job</Link></button>
 
           </div>
         </div>
