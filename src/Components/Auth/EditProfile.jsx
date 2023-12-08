@@ -97,7 +97,8 @@ function EditProfile() {
     <>
      <div onClick={() => setShow(!show)}>
          { isAuthorized  &&  <div className={styles.userDetails}>
-                <img src={userData?.photoURL || userImg} alt="" />
+                {/* <img src={userData?.photoURL || userImg} alt="" /> */}
+                {existingImage !==""?<img className='p-4'  width={'100%'} src={preview?preview: `${BASE_URL}/uploads/${existingImage}`} alt="" />: <img  style={{borderRadius:'50%'}} className=' img-fluid' src={preview?preview:( userData?.photoURL || userImg)}  width={'100%'} height={"100%"}  alt="" />}
                 <h6>{userData?.displayName || sessionStore?.username}</h6>
                 </div>}
                 { isUserAuthorized  && <div className={styles.userDetails}>
