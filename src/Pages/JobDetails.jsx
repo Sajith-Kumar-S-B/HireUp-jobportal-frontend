@@ -65,7 +65,7 @@ function JobDetails() {
             <h4>Job Details</h4>
             <h2>{job?.jobTitle}</h2>
            
-          <div className={styles.single_buttons}> <button>{job?.employmentType}</button> 
+          <div className={styles.single_buttons}> <button>{job?.employmentType}</button> {' '}
           {isUserAuthorized? <button onClick={handleApply}>Apply Now</button>: null}
            </div>
           <div>
