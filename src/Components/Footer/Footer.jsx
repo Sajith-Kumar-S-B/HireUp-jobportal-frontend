@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from './Footer.module.css'
 import { MDBIcon } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import interactImg from '../../Assets/interact-hero.webp'
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 function Footer() {
+const navigate = useNavigate()
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qzm9mue', 'template_k48tcoo', form.current, 'AQ9yTjVLmd-VQxJzE')
+      .then((result) => {
+          console.log(result.text);
+          toast.success("Subscribed to Hireup Newsletter")
+          navigate("/user/login")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <>
 
@@ -15,25 +33,27 @@ function Footer() {
     <div  className={styles.contact_form}>
    
 
-
-           <div className={styles.contact_form_details}>   
-           <h3 className={styles.footer_heading}>Subscribe to our Newsletter</h3> 
-       
-         <div className={styles.contact_details_div}>
-             <label htmlFor='subscribe'>
-           
+<form ref={form} onSubmit={sendEmail}>
   
-                  Email*
-                  </label>
-               <input type='text'  id='subscribe'  />
-         </div>
-         <div className={styles.contact_details_div}>
+             <div className={styles.contact_form_details}>   
+             <h3 className={styles.footer_heading}>Subscribe to our Newsletter</h3> 
+         
+           <div className={styles.contact_details_div}>
+               <label htmlFor='subscribe'>
              
-               <textarea placeholder=' Enter your message' type='text'  id='subscribe'  />
-         </div>
-         <button>Submit</button>
+    
+                    Email*
+                    </label>
+                 <input name="user_email" type='text'  id='subscribe'  />
            </div>
-
+           <div className={styles.contact_details_div}>
+               
+                 <textarea name="message" placeholder=' Enter your message' type='text'  id='subscribe'  />
+           </div>
+           <button type='submit'>Submit</button>
+             </div>
+  
+</form>
     </div>
     <div className={styles.contact_image} >
    <img style={{width:'100%'}} src={interactImg} alt="contact" />

@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./HomeSection.module.css";
 import reviewImg from '../../Assets/Professional Woman.webp'
+import reviewImg1 from '../../Assets/comment_3.png'
+
 import reviewImg2 from '../../Assets/Male Portrait.webp'
 import reviewImg3 from '../../Assets/Professional Female .webp'
 
@@ -66,11 +68,11 @@ function HomeSectiontwo() {
         
         <SwiperSlide  className={styles.swiper_slide}><div className={styles.review_bar}>
                   <div className={styles.review_img}>
-                    <img src={reviewImg} alt="" />
+                    <img src={reviewImg1} alt="" />
                   </div>
                   <div className={styles.review_text} >
                   
-                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+                  <p>I can't imagine my day to day without this platform. Life would be a lot more difficult.</p>
     <h6>-Robert Angel</h6>
                   </div>
                 </div> </SwiperSlide>
@@ -80,7 +82,7 @@ function HomeSectiontwo() {
                   </div>
                   <div className={styles.review_text} >
                   
-                  <p>I love HireUp. I got my current job at a startup entirely through the site last year - it's super easy to use and I love the UI.</p>
+                  <p>I got my tech job on HireUp 4 years ago and I'm still happy! Pays well, great culture, and unlimited PTO.</p>
     <h6>-Robert Angel</h6>
                   </div>
                 </div> </SwiperSlide>

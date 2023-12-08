@@ -7,12 +7,6 @@ import marq4 from '../../Assets/636dd759d712872b6c7e62ad_g3707.svg'
 import marq5 from '../../Assets/636dd759d712873dc17e62ee_Vector-1.svg'
 import marq6 from '../../Assets/636dd759d712874df97e6332_Vector-5.svg'
 import marq7 from '../../Assets/636dd759d712877d277e62be_Group-1.svg'
-
-
-
-
-
-
 import Marquee from "react-fast-marquee";
 
 

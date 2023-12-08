@@ -151,8 +151,10 @@ top: 10%;
 
 .review_text{
     width: 80%;
-    margin: auto;
+    margin:auto;
+    height: 100%;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
    
