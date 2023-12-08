@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../Components/Header/Header'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/baseUrl'
@@ -8,8 +8,11 @@ import { PageHeader } from '../Components/jobsection/PageHeader'
 
 import Icon from '@mdi/react';
 import { mdiPlusBoxMultipleOutline } from '@mdi/js';
+import { UserAuthorisationContext } from '../Contexts/Authorize'
 
 function JobDetails() {
+  const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
+
     const navigate = useNavigate()
     const {id} = useParams()
     const [job,setJob] = useState([])
@@ -62,7 +65,9 @@ function JobDetails() {
             <h4>Job Details</h4>
             <h2>{job?.jobTitle}</h2>
            
-          <div className={styles.single_buttons}> <button>{job?.employmentType}</button>  <button onClick={handleApply}>Apply Now</button></div>
+          <div className={styles.single_buttons}> <button>{job?.employmentType}</button> 
+          {isUserAuthorized? <button onClick={handleApply}>Apply Now</button>: null}
+           </div>
           <div>
               <h5>Job Description</h5>
               <p>{job?.description}</p>

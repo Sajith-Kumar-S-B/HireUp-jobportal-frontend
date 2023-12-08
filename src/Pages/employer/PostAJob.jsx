@@ -129,8 +129,7 @@ function PostAJob() {
         <option selected value="">Choose Experience</option>
         <option value="Any experience">Any Experience</option>
         <option value="Work remotely">Work remotely</option>
-
-        <option value="Intership">Intership</option>
+        <option value="Internship">Internship</option>
       </select>
       </div>
             

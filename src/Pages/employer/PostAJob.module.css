@@ -253,7 +253,11 @@ color: gray;
     align-items: center;
 }
 
-
+.pagination button{
+    padding: 5px 10px;
+    background-color: #151f63;
+    color: #fff;
+}
 
 @media (max-width:756px){
 

@@ -14,12 +14,15 @@ import UpdateJob from './Pages/employer/UpdateJob';
 import { BASE_URL } from './services/baseUrl';
 import JobDetails from './Pages/JobDetails';
 import { AuthorisationContext, UserAuthorisationContext } from './Contexts/Authorize';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-
+import Icon from '@mdi/react';
+import { mdiHumanGreetingProximity } from '@mdi/js';
 function App() {
   const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
     const {isUserAuthorized,setIsUserAuthorized} = useContext(UserAuthorisationContext)
+    
+
   return (
     <>
 
@@ -45,7 +48,7 @@ function App() {
 
 
     </Routes>
-    
+
     <ToastContainer
 position="top-center"
 autoClose={2000}
