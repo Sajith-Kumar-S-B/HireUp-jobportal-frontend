@@ -37,14 +37,14 @@ export const Category = () => {
         <div className='category_div'>Jobs by Location<span><IoIosArrowDown /></span>
         <div className="dropContent">
                 <p>
-                    Software Engineer jobs
+                   London
                 </p>
                 <p>
-                    Software Engineer jobs
+                   India
                 </p><p>
-                    Software Engineer jobs
+                United States
                 </p><p>
-                    Software Engineer jobs
+                   Australia
                 </p>
                   </div></div>
         <div className='category_div'>Jobs by Role<span><IoIosArrowDown /></span>
