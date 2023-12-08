@@ -10,6 +10,8 @@ import app, { auth } from '../../../firebase/firebase.config';
 import { AuthorisationContext, UserAuthorisationContext, userDataContext } from '../../../Contexts/Authorize';
 import { RecruitLoginAPI, RecruitRegisterAPI } from '../../../services/allApi';
 import { TokenAuthContext } from '../../../Contexts/TokenAuth';
+import Icon from '@mdi/react';
+import { mdiHumanGreetingProximity } from '@mdi/js';
 function Register({login}) {
     const googleProvider = new GoogleAuthProvider();
     const {isAuthorized,setIsAuthorized} = useContext(AuthorisationContext)
@@ -133,7 +135,8 @@ const {email,password} = recruitData
          </div>
     </div>
      <div className={styles.login_two}>
-         <div>logo</div>
+         <div className={styles.logo}>  <Icon path={mdiHumanGreetingProximity} size={2} />
+        <h4>HireUp</h4></div>
          <div className={styles.login_form} >
        <h3>   Login   </h3>
        <p>Where the best startups find their teams</p>
@@ -154,7 +157,8 @@ const {email,password} = recruitData
     
         
     <div className={styles.login_two}>
-        <div>logo</div>
+    <div className={styles.logo}>  <Icon path={mdiHumanGreetingProximity} size={2} />
+        <h4>HireUp</h4></div>
         <div className={styles.login_form} >
       <h3>   Create Account   </h3>
    <p>Where the best startups find their teams</p> 
