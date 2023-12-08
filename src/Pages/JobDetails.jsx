@@ -39,14 +39,14 @@ function JobDetails() {
               Swal.fire({
                 title: `You have successfully applied for the job of ${job?.jobTitle}`,
                  icon:"success",
-                 timer:1500
+                 timer:2000
               });
             };
             reader.readAsDataURL(file);
           }
           setTimeout(()=>{
             navigate('/jobs')
-          },[2000])
+          },[2500])
         
         
 
@@ -65,7 +65,7 @@ function JobDetails() {
             <h4>Job Details</h4>
             <h2>{job?.jobTitle}</h2>
            
-          <div className={styles.single_buttons}> <button>{job?.employmentType}</button> {' '}
+          <div className={styles.single_buttons}> <button style={{backgroundColor:'blue',border:'none'}}>{job?.employmentType}</button> {' '}
           {isUserAuthorized? <button onClick={handleApply}>Apply Now</button>: null}
            </div>
           <div>
