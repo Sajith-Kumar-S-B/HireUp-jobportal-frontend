@@ -72,6 +72,16 @@ function JobDetails() {
               <h5>Job Description</h5>
               <p>{job?.description}</p>
             </div>
+            <div>
+            <h5>Job Location</h5>
+              <p style={{textAlign:'center justify'}}><strong>{job?.jobLocation}</strong></p>
+            </div>
+            <div>
+            <h5>Experience Level  </h5>
+            <p>{job?.experienceLevel}</p>
+            <h5>Salary </h5>  
+            <p><strong>{job?.minPrice}k - {job?.maxPrice}k</strong> </p>
+            </div>
          </div>
   
          <div className={styles.company}>

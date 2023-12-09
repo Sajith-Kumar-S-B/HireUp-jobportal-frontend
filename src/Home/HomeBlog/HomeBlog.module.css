@@ -57,6 +57,7 @@
    flex-direction: column;
    justify-content: center;
     margin: 0 auto;  
+    
 }
 
 .homeBlog_content h3{
@@ -108,12 +109,19 @@
     .homeBlog_divOne{
         grid-template-columns:100%;
         width: 95%;
-        background-color: transparent;
+        padding-top: 2rem;
+        border-radius: 20px;
+        /* background-color: transparent; */
     }
 
     .homeBlog_content{
         width: 90%;
+       
     }
 
+
+    .homeBlog_content button{
+      margin-bottom: 2rem;
+    }
     
 }

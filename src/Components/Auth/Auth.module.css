@@ -170,17 +170,17 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    border: 2px solid var(--clr-lg);
   }
 
   .userDetails h6{
     font-weight: 600;
     margin: auto;
+    color: var(--clr-lg);
   }
 
 
-  .Modal{
-   
-  }
+  
 
 
   @media (max-width:750px){

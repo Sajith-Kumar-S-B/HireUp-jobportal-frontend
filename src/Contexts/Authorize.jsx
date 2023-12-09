@@ -12,14 +12,7 @@ function Authorize({children}) {
     const [userData, setUserData] = useState({})
     const [currentUser, setCurrentUser] = useState(null);
    
-    useEffect(()=>{
-      if(isAuthorized){
-        setIsAuthorized(true)
-        setIsUserAuthorized(false)
-      }
-
-      
-    },[isAuthorized])
+   
   
   return (
     <>

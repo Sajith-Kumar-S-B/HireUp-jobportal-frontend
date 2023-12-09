@@ -28,31 +28,41 @@ function Jobs() {
   const [query, setQuery] = useState("");
   const [location, setLocation] = useState("");
 
-  useEffect(() => {
-   if(isUserAuthorized){
-    fetch(`${BASE_URL}/all-jobs`)
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data)
-      setJobs(data);
-      setLoading(false);
-    });
-   }
+  // useEffect(() => {
+  //  if(isUserAuthorized && userData || sessionStore){
+  //   fetch(`${BASE_URL}/all-jobs`)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     // console.log(data)
+  //     setJobs(data);
+  //     setLoading(false);
+  //   });
+  //  }
     
     
-  }, [isUserAuthorized]);
+  // }, [isUserAuthorized]);
 
   useEffect(()=>{
 
-    if(isAuthorized && userData || sessionStore){
+    if(isAuthorized ){
 
       fetch(`${BASE_URL}/my-jobs/${userData?.email || sessionStore?.email}`).then((res)=>res.json()).then((data)=>{
         setJobs(data)
         setLoading(false)
        })
     
-    };
-  },[isAuthorized])
+    }else{
+
+      fetch(`${BASE_URL}/all-jobs`)
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data)
+      setJobs(data);
+      setLoading(false);
+    });
+
+    }
+  },[])
 
   // console.log(jobs);
 

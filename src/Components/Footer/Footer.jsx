@@ -61,9 +61,9 @@ const navigate = useNavigate()
   </div>
       <div  className={styles.footer_content}>
         <div  className={styles.footer_head}>
-           <h4 ><Link to={'/'} style={{textDecoration:'none',color:'white',fontWeight:'bold'}}><MDBIcon className='me-2' fas icon="blog"  />
+           <h4 ><a href='#home' style={{textDecoration:'none',color:'white',fontWeight:'bold'}}><MDBIcon className='me-2' fas icon="blog"  />
           
-      HireFound</Link></h4>
+      HireUp</a></h4>
       <p>Find your hire</p>
         </div>
         <div  className={styles.footer_para}>

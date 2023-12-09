@@ -30,7 +30,7 @@
 }
 
 .jobs{
-    background-color: #fafafa;
+    background-color: var(--clr-bg);
     display: grid;
     grid-template-columns: 70% auto;
     padding: 2rem;

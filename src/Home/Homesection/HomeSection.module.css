@@ -46,6 +46,7 @@
     width: 150%;
     height: 200%;
     background-color: #012241;
+    border: 1px solid var(--clr-lg);
     border-radius: 100%;
     top: 20%;
     left: -25%;

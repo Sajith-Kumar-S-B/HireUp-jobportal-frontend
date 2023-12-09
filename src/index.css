@@ -6,7 +6,9 @@
   font-family: 'PT Serif', serif;
 }
 
-
+body{
+  background-color: var(--clr-bg);
+}
 
 .light {
   --clr-bg: #fff;

@@ -58,7 +58,7 @@ const darkMode = useSelector((state) => state.theme.darkMode);
   
   return (
     <>
-      <nav className={`${styles.navbar} ${darkMode ? styles['dark'] : styles['light'] }`}>
+      <nav id='home' className={`${styles.navbar} ${darkMode ? styles['dark'] : styles['light'] }`}>
       <div className={styles.container}>
         <div className={styles.logo}>
         <Icon path={mdiHumanGreetingProximity} size={2} />
