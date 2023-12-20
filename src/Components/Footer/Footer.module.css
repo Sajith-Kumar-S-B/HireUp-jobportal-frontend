@@ -116,9 +116,9 @@ align-items: center;
     height: 100%;
 }
 
-.contact_image img{
+/* .contact_image img{
     margin-top: 20px;
-}
+} */
 
 .contact_form_details{
     width: 80%;
