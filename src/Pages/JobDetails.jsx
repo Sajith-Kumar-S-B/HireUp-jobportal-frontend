@@ -29,7 +29,7 @@ function JobDetails() {
             title: "Upload Your Resume",
             input: "file",
             inputAttributes: {
-              "accept": "image/*",
+              "accept": "file/*",
               "aria-label": "Upload your Resume"
             }
           });
