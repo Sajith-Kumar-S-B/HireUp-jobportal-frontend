@@ -9,7 +9,6 @@ const ThemeToggle = () => {
     dispatch({ type: "TOGGLE_DARK_MODE" });
   };
 
-  console.log(darkMode);
 
   return (
     <div  onClick={toggleDarkMode}>

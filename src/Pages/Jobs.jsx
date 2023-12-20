@@ -158,7 +158,7 @@ function Jobs() {
           employmentType.toLowerCase() === selected.toLowerCase()
       );
 
-      console.log(filteredJobs);
+      // console.log(filteredJobs);
     }
 
     // slice data based on currentpage

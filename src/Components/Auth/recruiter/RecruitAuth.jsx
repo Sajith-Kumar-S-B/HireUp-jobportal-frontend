@@ -26,7 +26,7 @@ function Register({login}) {
 
     const isLogin = login?true:false
 
-    console.log(recruitData);
+    // console.log(recruitData);
 const handleGoogleLogin = ()=>{
     signInWithPopup(auth,googleProvider).then((result) => {
      
@@ -140,8 +140,10 @@ const {email,password} = recruitData
          <div className={styles.login_form} >
        <h3>   Login   </h3>
        <p>Where the best startups find their teams</p>
+       <form>
        <input onChange={(e)=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="email" />
        <input onChange={(e)=>setRecruitData({...recruitData,password:e.target.value})} value={recruitData.password} placeholder='Password' type="password" />
+       </form>
        <div className={styles.breakText}>
       &mdash;&mdash;&mdash;&mdash;&mdash;    <span> or Login with Google </span>   &mdash;&mdash;&mdash;&mdash;&mdash;
       </div>
@@ -162,10 +164,12 @@ const {email,password} = recruitData
         <div className={styles.login_form} >
       <h3>   Create Account   </h3>
    <p>Where the best startups find their teams</p> 
+   <form>
     <input  onChange={e=>setRecruitData({...recruitData,username:e.target.value})} value={recruitData.username} placeholder='Username' type="text" />
 
     <input onChange={e=>setRecruitData({...recruitData,email:e.target.value})} value={recruitData.email} placeholder='Email' type="text" />
       <input onChange={e=>setRecruitData({...recruitData,password:e.target.value})} value={recruitData.password} placeholder='Password' type="password" />
+     </form>
       <div className={styles.breakText}>
       &mdash;&mdash;&mdash;&mdash;&mdash;    <span> or Register with Google </span>   &mdash;&mdash;&mdash;&mdash;&mdash;
       </div>

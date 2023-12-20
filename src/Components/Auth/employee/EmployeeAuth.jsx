@@ -184,7 +184,7 @@ function Register({login}) {
       <input  onChange={e=>setUserLogin({...userLogin,username:e.target.value})} value={userLogin.username} placeholder='Username' type="text" />
   
       <input onChange={e=>setUserLogin({...userLogin,email:e.target.value})} value={userLogin.email} placeholder='Email' type="text" />
-        <input onChange={e=>setUserLogin({...userLogin,password:e.target.value})} value={userLogin.password} placeholder='Password' type="Password" />
+        <input onChange={e=>setUserLogin({...userLogin,password:e.target.value})} value={userLogin.password} placeholder='Password' type="password" />
    </form>
       <div className={styles.breakText}>
       &mdash;&mdash;&mdash;&mdash;&mdash;    <span> or Register with Google </span>   &mdash;&mdash;&mdash;&mdash;&mdash;

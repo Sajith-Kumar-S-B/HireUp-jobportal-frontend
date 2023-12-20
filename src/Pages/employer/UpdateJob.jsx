@@ -65,7 +65,7 @@ function UpdateJob() {
          
     
       
-      console.log(watch("example"))
+      // console.log(watch("example"))
 
       const options  = [
         {value:"ReactJS",label:"ReactJS"},

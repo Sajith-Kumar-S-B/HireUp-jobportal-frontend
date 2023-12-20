@@ -17,7 +17,7 @@ export const PostingDate = ({handleChange}) => {
     const thirtyDaysAgoDate = thirtyDaysAgo.toISOString().slice(0,10)
     const sevenDaysAgoDate = sevenDaysAgo.toISOString().slice(0,10)
     
-    console.log(sevenDaysAgoDate)
+    // console.log(sevenDaysAgoDate)
 
   return (
     <div className={styles.Location}>

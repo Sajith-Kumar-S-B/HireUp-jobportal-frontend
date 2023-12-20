@@ -72,7 +72,7 @@ const prevPage = ()=>{
 
     }
    
-    console.log(searchText);
+    // console.log(searchText);
   return (
     <>
     <Header/>
